@@ -39,7 +39,7 @@
     });
 
     request.addEventListener('error', (e) => {
-      alert("There was an error retrieving data from " + endpoint_url + ", most likely due to a missing Access-Control-Allow-Origin header. Use the Chrome plugin Allow-Control-Origin: * to avoid that.");
+      alert('There was an error retrieving data from ' + endpoint_url + ', most likely due to a missing Access-Control-Allow-Origin header. Use the Chrome plugin Allow-Control-Origin: * to avoid that.');
     });
 
     request.open('GET', endpoint_url, true);
