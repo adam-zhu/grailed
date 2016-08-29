@@ -1,0 +1,158 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* app styles */
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url("https://ds6dnbdlsnuyn.cloudfront.net/assets/ProximaNova-Regular-e51ea7b0367d3255086bde68e6b90ca0.otf")
+}
+
+body {
+  font-family: "ProximaNova-Regular";
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  height: 58px;
+  position: relative;
+  background: black;
+}
+
+.app_title {
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: .275em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.filters {
+  margin: 20px auto;
+  text-align: center;
+}
+.filter {
+  display: inline-block;
+  margin: 0 20px;
+  line-height: 2;
+}
+.filter:hover {
+  cursor: pointer;
+}
+.filter.selected {
+  border-bottom: 3px solid black;
+}
+
+.listings {
+  width: 73.88888889%; /* 1064/1440 */
+  max-width: 1064px;
+  margin: auto;
+  zoom: 1;
+  overflow: auto;
+}
+.listing {
+  width: 22.55639098%; /* 240/1064 */
+  max-width: 240px;
+  margin: 1.221804511%; /* 13/1064 */
+  float: left;
+  overflow: hidden;
+}
+
+.listing .image_container {
+  position: relative;
+  background: lightgray;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 133.333333333%;
+}
+.listing .image_container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 101%; /* compensate for subpixel rounding */
+  height: auto;
+}
+.listing .image_container:hover {
+  cursor: pointer;
+}
+
+.listing.liked {
+  background-image: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7d7rvuwoFS1sLF06-1pYdjSfqMAxruKg_vs7hilf6pgjiV8fhYBJuJQ');
+  background-size: 50%;
+  background-position: center 33%;
+  background-repeat: no-repeat;
+}
+.listing.liked .image_container {
+  opacity: .6;
+}
+
+.listing .item_meta {
+  margin-top: 5px;
+}
+.listing .item_meta strong,
+.listing .item_meta span,
+.listing .item_meta em {
+  display: block;
+  white-space: nowrap;
+  line-height: 1.4;
+  font-size: 12px;
+}
+.listing .item_meta strong {
+  font-weight: bold;
+}
+.listing .item_meta em {
+  font-style: italic;
+  font-size: 10px;
+}
