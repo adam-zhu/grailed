@@ -53,11 +53,11 @@
       data = _.cloneDeep(state.data);
 
       switch (e.target.textContent) {
-        case state.filters[0]: // 'new': order by created_at_date descending
+        case state.filters[0]: // 'new': order by created_at descending
           data.data.sort((a,b) => b.created_at_moment - a.created_at_moment);
         break;
 
-        case state.filters[1]: // 'updated': order by price_updated_at_date descending
+        case state.filters[1]: // 'updated': order by price_updated_at descending
           data.data.sort((a,b) => b.price_updated_at_moment - a.price_updated_at_moment);
         break;
 
